@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" href="../srs/css/style.css"> -->
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container wrapper">
+        <header class="header">
+            <img class="logo" src="../srs/img/logo/logolight.png" alt="" height="50">
+            <button type="button" class="btn btn-light openModal">LogIn</button>
+        </header>
+    
+        <main class="main">
+            <div class="navigation">
+                <div class="btn-group">
+                    <button type="button"
+                            class="btn btn-light">
+                            Пост 1
+                    </button>
+                    <button type="button"
+                            class="btn btn-outline-light">
+                            Пост 2
+                    </button>
+                    <button type="button"
+                            class="btn btn-outline-light">
+                            Пост 3
+                    </button>
+                    <button type="button"
+                            class="btn btn-outline-light">
+                            Пост 4
+                    </button>
+                </div>
+            </div>
+    
+            <div class="columns_list">
+                <ul class="list-group d-flex">
+                    <li class="list-group-item">
+                        <span>Монетник :</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span>Купюрник :</span>
+                    </li><li class="list-group-item">
+                        <span>Терминал :</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span>Общая сумма :</span>
+                    </li>
+                    <li class="list-group-item">
+                        <button type="button" class="btn btn-secondary">Инкасация произведена</button>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    
+        <footer class="footer"></footer>
+       
+    </div>
+
+    <div class="modal_background">
+        <form class="modale_login">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Запомнить на этом устройстве</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Войти</button>
+          </form>
+    </div>
+
+    
+</body>
+</html>
