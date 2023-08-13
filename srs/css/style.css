@@ -14,6 +14,10 @@ body, html{
     flex: 1 0 auto;
 }
 
+.main_container{
+    display: none;
+}
+
 .container{
     padding-top: 15px;
     padding-bottom: 15px;
@@ -59,7 +63,7 @@ body, html{
 }
 
 .modal_background {
-    display: none;
+    display: block;
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0;

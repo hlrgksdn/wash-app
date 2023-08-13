@@ -1,6 +1,7 @@
 function login (openButton, modal) {
-    const open = document.querySelector(openButton);
-    const modalWindow = document.querySelector(modal);
+    const open = document.querySelector(openButton),
+          modalWindow = document.querySelector(modal);
+          
 
     function openModal () {
         modalWindow.style.display = 'block';
@@ -25,6 +26,8 @@ function login (openButton, modal) {
             closeModal();
         }
     })
+
+    
 
 }
 
