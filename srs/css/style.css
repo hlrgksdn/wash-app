@@ -87,6 +87,11 @@ body, html{
     
 }
 
+.error_mesage{
+    display: none;
+    color: #FF0000;
+}
+
 .incasation_wrapper{
     display: none
 }

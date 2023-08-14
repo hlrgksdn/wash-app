@@ -23,7 +23,13 @@ function getData (statusClass, coinClass, cashClass, cashlessClass, summaryClass
         fetch(`https://wash-app-d9b1b-default-rtdb.europe-west1.firebasedatabase.app/post${i}.json`, {
             method: 'GET'
         })
-         .then(response => response.json())
+         .then(response => {
+            if(response.ok) {
+                return response.json()
+            } else {
+                throw new Error(response.status)
+            }
+         })
          .then(json => {
             coinField.innerHTML = json.coin;
             cashField.innerHTML = json.cash;
@@ -37,6 +43,14 @@ function getData (statusClass, coinClass, cashClass, cashlessClass, summaryClass
                 statusField.innerHTML = 'Не работает'
                 statusField.style.color = '#FF0000'
             }
+         })
+         .catch(error => {
+            statusField.innerHTML = `Ошибка получения данных с сервера: ${error}`;
+            statusField.style.color = '#FF0000';
+            coinField.innerHTML = '';
+            cashField.innerHTML = '';
+            cashlessField.innerHTML = '';
+            summaryField.innerHTML = '';
          })
     }
     
