@@ -87,3 +87,34 @@ body, html{
     
 }
 
+.incasation_wrapper{
+    display: none
+}
+
+.incasation_modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    width: 350px;
+    height: 150px;
+    top: calc(50% - 250px);
+    left: calc(50% - 175px);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    cursor: default;
+    padding: 40px 20px;
+}
+
+.incasation_modal-title{
+    text-align: center;
+}
+
+.incasation_modal-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.incasation_modal-button{
+    width: 120px;
+}

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"/>
-    <!-- <link rel="stylesheet" href="../srs/css/style.css"> -->
     <title>Document</title>
 </head>
 <body>
@@ -13,7 +12,7 @@
         
         <header class="header">
             <img class="logo" src="../srs/img/logo/logolight.png" alt="" height="50">
-            <button type="button" class="btn btn-light openModal">LogIn</button>
+            <button type="button" class="btn btn-light open_modal">LogIn</button>
         </header>
     
         <main class="main">
@@ -42,18 +41,21 @@
                 <div class="columns_list">
                     <ul class="list-group d-flex">
                         <li class="list-group-item">
-                            <span>Монетник : <span class="coin_field"></span> </span>
+                            <span>Статус поста : <b><span class="status_field"></span></b></span>
                         </li>
                         <li class="list-group-item">
-                            <span>Купюрник : <span class="cash_field"></span></span>
+                            <span>Монетник : <b><span class="coin_field"></span> ₽</b></span>
+                        </li>
+                        <li class="list-group-item">
+                            <span>Купюрник : <b><span class="cash_field"></span> ₽</b></span>
                         </li><li class="list-group-item">
-                            <span>Терминал : <span class="cashless_field"></span></span>
+                            <span>Терминал : <b><span class="cashless_field"></span> ₽</b></span>
                         </li>
                         <li class="list-group-item">
-                            <span>Общая сумма : <span class="summary_field"></span></span>
+                            <span>Общая сумма : <b><span class="summary_field"></span> ₽</b></span>
                         </li>
                         <li class="list-group-item">
-                            <button type="button" class="btn btn-secondary">Инкасация произведена</button>
+                            <button type="button" class="btn btn-secondary incasation">Инкасация произведена</button>
                         </li>
 
                     </ul>
@@ -81,6 +83,16 @@
             </div>
             <button type="submit" class="btn btn-primary">Войти</button>
           </form>
+    </div>
+
+    <div class="modal_background incasation_wrapper">
+        <div class="incasation_modal">
+            <p class="incasation_modal-title">Произвести инкасацию?</p>
+            <div class="incasation_modal-buttons">
+                <button type="button" class="btn btn-success incasation_modal-button">Подтвердить</button>
+                <button type="button" class="btn btn-danger incasation_modal-button">Отменить</button>
+            </div>
+        </div>
     </div>
 
     
