@@ -11,7 +11,12 @@ window.addEventListener('DOMContentLoaded', ()=> {
           incasationButton = document.querySelector('.incasation'),
           errorMesage = document.querySelector('.error_mesage');
 
-    let idToken;
+    let idToken = localStorage.getItem('user');
+
+    if (idToken) {
+        authWindow.style.display = 'none';
+        getData('.status_field','.coin_field', '.cash_field', '.cashless_field', '.summary_field', idToken);
+    }
 
     authWindow.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -23,7 +28,10 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 throw new Error (response.status)
             }
         })
-        .then(data => idToken = data.idToken)
+        .then(data => {
+            localStorage.setItem('user', data.idToken);
+            idToken = localStorage.getItem('user')
+        })
         .then(() => {
             getData('.status_field','.coin_field', '.cash_field', '.cashless_field', '.summary_field', idToken);
         })
@@ -36,8 +44,5 @@ window.addEventListener('DOMContentLoaded', ()=> {
     incasationButton.addEventListener('click', () => {
         incasation(idToken); 
     })
-        
    
-
-    
 })

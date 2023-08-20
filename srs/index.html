@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"/>
-    <title>Document</title>
+    <title>Инкасация</title>
 </head>
 <body>
     
     <div class="container wrapper">
         
         <header class="header">
-            <img class="logo" src="../srs/img/logo/logolight.png" alt="" height="50">
+            <img class="logo" src="../srs/img/logo/logolight.png" alt="" height="30">
             <button type="button" class="btn btn-light open_modal">LogIn</button>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link active bg-white text-dark" href="#">Инкасация</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link bg-transparent text-white" href="./statistic.html">Статистика</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link bg-transparent text-white" href="#">Пополнить карту</a>
+                </li>
+              </ul>
         </header>
     
         <main class="main">
             <div class="main_container">
-                <div class="navigation">
+                <div class="post_buttons">
                     <div class="btn-group">
                         <button type="button"
                                 class="btn btn-light post_button">
@@ -67,8 +78,8 @@
        
     </div>
 
-    <div class="modal_background ">
-        <form class="modale_login auth_window">
+    <div class="modal_background auth_window ">
+        <form class="modale_login ">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address</label>
               <input type="email" id="mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

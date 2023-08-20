@@ -26,6 +26,8 @@ body, html{
 .header {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 10px;
     padding: 25px;
     background-color: #eb6020;
     border-radius: 4px;
@@ -33,7 +35,19 @@ body, html{
     color: #fff;
 }
 
-.navigation {
+.nav {
+    flex-basis: 100%;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.nav-link{
+    border: #fff 1px solid;
+    border-radius: 4px;
+}
+
+.post_buttons {
     margin-top: 30px;
     padding: 25px;
     background-color: #eb6020;

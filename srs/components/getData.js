@@ -1,7 +1,3 @@
-
-
-
-
 function getData (statusClass, coinClass, cashClass, cashlessClass, summaryClass, idToken) {
     const coinField = document.querySelector(coinClass),
           cashField = document.querySelector(cashClass),
@@ -14,7 +10,7 @@ function getData (statusClass, coinClass, cashClass, cashlessClass, summaryClass
     let dataLink = `https://wash-app-d9b1b-default-rtdb.europe-west1.firebasedatabase.app/post${i}.json`;
 
     postButtons.forEach((but, num) => {
-        if (but.classList.contains('btn-light')) {  /*определяем на каком посте произвести инкасацию*/
+        if (but.classList.contains('btn-light')) {  /*определяем к какому посту обратиться*/
             i = num + 1;
         }
     })
