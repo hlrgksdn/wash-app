@@ -9,7 +9,8 @@ import './css/style.css';
 window.addEventListener('DOMContentLoaded', ()=> {
     const authWindow = document.querySelector('.auth_window'),
           incasationButton = document.querySelector('.incasation'),
-          errorMesage = document.querySelector('.error_mesage');
+          errorMesage = document.querySelector('.error_mesage'),
+          loginButton = document.querySelector('.login');
 
     let idToken = localStorage.getItem('user');
 
@@ -17,6 +18,12 @@ window.addEventListener('DOMContentLoaded', ()=> {
         authWindow.style.display = 'none';
         getData('.status_field','.coin_field', '.cash_field', '.cashless_field', '.summary_field', idToken);
     }
+
+    loginButton.addEventListener('click', () => {
+        localStorage.removeItem('user');
+        idToken = null;
+        location.reload()
+    })
 
     authWindow.addEventListener('submit', (e) => {
         e.preventDefault();

@@ -7,7 +7,7 @@ function getData (statusClass, coinClass, cashClass, cashlessClass, summaryClass
           postButtons = document.querySelectorAll('.post_button');
 
     let i = 1;
-    let dataLink = `https://wash-app-d9b1b-default-rtdb.europe-west1.firebasedatabase.app/post${i}.json`;
+    let dataLink = `http://185.104.251.69/site.php?post=${i}`;
 
     postButtons.forEach((but, num) => {
         if (but.classList.contains('btn-light')) {  /*определяем к какому посту обратиться*/
@@ -16,7 +16,7 @@ function getData (statusClass, coinClass, cashClass, cashlessClass, summaryClass
     })
 
     function requestOnServer () {
-        fetch(`https://wash-app-d9b1b-default-rtdb.europe-west1.firebasedatabase.app/post${i}.json`, {
+        fetch(`http://185.104.251.69/site.php?post=${i}`, {
             method: 'GET'
         })
          .then(response => {
@@ -27,6 +27,7 @@ function getData (statusClass, coinClass, cashClass, cashlessClass, summaryClass
             }
          })
          .then(json => {
+            console.log(json);
             coinField.innerHTML = json.coin;
             cashField.innerHTML = json.cash;
             cashlessField.innerHTML = json.cashless;
@@ -63,7 +64,7 @@ function getData (statusClass, coinClass, cashClass, cashlessClass, summaryClass
                 item.classList.remove('btn-outline-light');
                 item.classList.add('btn-light');
                 i = num + 1;
-                dataLink = `https://wash-app-d9b1b-default-rtdb.europe-west1.firebasedatabase.app/post${i}.json`;
+                dataLink = `http://185.104.251.69/site.php?post=${i}`;
             }
 
             if(idToken) {
