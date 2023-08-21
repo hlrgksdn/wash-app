@@ -17,15 +17,13 @@ function incasation (idToken) {
     incasationModal.style.display = 'block';
 
     sucsessButton.addEventListener('click', ()=> {
-        fetch(`https://wash-app-d9b1b-default-rtdb.europe-west1.firebasedatabase.app/post${i}.json`, {
-            method: "PATCH",
+        fetch(`http://atod.fun/site.php`, {
+            method: "POST",
             headers: {
                 'Content-Type' : 'application/json'
             },
             body: JSON.stringify({
-                cash: 0,
-                cashless: 0,
-                coin: 0
+                num: i,
             })
         })
          .then(() => {
